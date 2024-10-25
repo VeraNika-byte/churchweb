@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farnost Lochenice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="header-container">
+        <div class="logo">
+            <img src="image/cross.svg" alt="Ikona křížku" class="icon-cross">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">ÚVOD</a></li>
+                <li><a href="#masses">BOHOSLUŽBY</a></li>
+                <li><a href="#masses">O FARNOSTI</a></li>
+                <li><a href="#church">O KOSTELU</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>FARNOST LOCHENICE</h1>
+
+    </div>
+</section>
+
+<div class="masses-info">
+    <p id="next-masses">Načítání nejbližších akcí...</p>
+</div>
+
+<section id="masses" class="masses">
+    <div class="masses-container">
+        <div class="masses-info-text">
+            <h3>O Farnosti</h3>
+            <p>Jsme katolickou farností v Lochenicích, patříme tedy do společenství Římskokatolické církve, jejíž učení je shrnuto v Katechismu římskokatolické církve.
+                Do naší farnosti patří kostel Narození Panny Marie v Lochenicích, v němž se konají pravidelné bohoslužby a příležitostně kulturní akce.</p>
+        </div>
+
+        <div class="calendar-container">
+            <h3>Kalendář Bohoslužeb pro měsíc <span id="month-name"></span></h3>
+            <div id="calendar"></div>
+        </div>
+    </div>
+</section>
+
+<section id="church" class="church">
+    <h3>Kostel Narození Panny Marie</h3>
+    <p>První zmínka o kostelu pochází již z roku 1124. Ve 14. století kostel farní, ve století 17. kostel filiální. Současná podoba kostela pochází z přestavby původního kostela v roce 1555, svědčí o tom nápis uvnitř. Roku 1702 byl kostel rozšířen a upraven barokně. Do podlahy presbytáře byly zasazeny figurální a erbovní náhrobníky datované k 17. a 18. století. Roku 1729 Karel Fred. Dobřenský z Dobřenic dal kostel opravit, rozšířit presbyterium a postavit novou zvonici. U kostela je k vidění skupina lip. Nejmohutnější má obvod 460cm. Kolem prochází žlutá turistická značka, která vede ve směru Dolní Přím - Lochenice.</p>
+</section>
+
+<footer id="contact">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Adresa farnosti</h4>
+            <p>Lochenice č.p.84, 503 02</p>
+            <h4>Poštovní adresa<h4>
+                <p>Velká 1/66<br>
+                    Pouchov<br>
+                    503 41 Hradec Králové<p>
+        </div>
+        <div class="footer-column">
+            <h4>Kontakt</h4>
+            <p>(+420) 495 215 083
+            <p>IČO: 62695983<p>
+            <p>Číslo farnosti: 821101</p>
+            <p>Email: rkf.lochenice@dihk.cz,
+                      rkf.hk.pouchov@dihk.cz</p>
+            <a href="https://pouchov.farnost.cz">WEB Farnost Pouchov</a>
+        </div>
+        <div class="footer-column">
+            <h4>Duchovní správa</h4>
+            <p>P. ThLic. Ing. Jiří Heblt<p>
+            <h4>Kontakt<h4>
+            <p>(+420) 777 572 525<p>
+            <p>heblt@centrum.cz<p>
+
+        </div>
+    </div>
+    <h5>&copy; 2024 Farnost Lochenice. Všechna práva vyhrazena.</h5>
+</footer>
+
+
+<script src="js.js"></script>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

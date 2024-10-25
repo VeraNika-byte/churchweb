@@ -1,0 +1,288 @@
+body {
+    font-family: "Bahnschrift";
+    background-color: floralwhite;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+.main-header {
+    background-color: floralwhite;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.icon-cross {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3d4161;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: floralwhite;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+    .nav-links.show{
+        display: flex;
+        z-index: 1000;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+
+
+    }
+}
+
+
+.hero {
+    background-image: url('image/kostelreal.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 160px 120px;
+
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-top: 125px;
+    margin-bottom: 10px;
+    color: floralwhite;
+
+}
+
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.hero h1, .hero p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.masses-info {
+    background-color: antiquewhite;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+@media (max-width: 768px) {
+    .hero h1,
+    .hero p {
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+}
+
+.mass-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.masses-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+#next-masses {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d4161;
+}
+.masses-info-text {
+    padding-right: 20px;
+    margin-top: 15px;
+}
+
+.calendar-container {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.calendar-day:hover {
+    background-color: floralwhite;
+}
+
+.highlight {
+    background-color: #3d4161;
+    color: #fff3cd;
+}
+
+
+.masses-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.masses-info-text, .calendar-container {
+    flex: 1 1 45%;
+}
+
+@media (max-width: 768px) {
+    .masses-container {
+        flex-direction: column;
+    }
+
+    .masses-info-text, .calendar-container {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+}
+
+
+.about, .church, .contact {
+    padding: 20px;
+}
+a {
+    color: floralwhite;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #3d4161;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    margin-top: 0;
+}
+h5{
+    background-color: floralwhite;
+    color: #3d4161;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4161 ;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: floralwhite;
+    border-radius: 10px;
+}
+
+.mass-day {
+    background-color: #ea868f;
+    color: white;
+}
