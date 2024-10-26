@@ -6,7 +6,6 @@ body {
     margin: 0;
 }
 
-
 .main-header {
     background-color: floralwhite;
     padding: 10px 20px;
@@ -18,7 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 .icon-cross {
@@ -26,7 +24,6 @@ body {
     height: 30px;
     margin-right: 10px;
 }
-
 
 .hamburger {
     display: none;
@@ -41,7 +38,6 @@ body {
     margin: 4px;
     transition: all 0.3s ease;
 }
-
 
 .nav-links {
     list-style: none;
@@ -72,10 +68,9 @@ body {
         top: 60px;
         right: 0;
     }
-    .nav-links.show{
+    .nav-links.show {
         display: flex;
         z-index: 1000;
-
     }
 
     .nav-links.active {
@@ -85,11 +80,8 @@ body {
     .hamburger {
         display: flex;
         z-index: 1000;
-
-
     }
 }
-
 
 .hero {
     background-image: url('image/kostelreal.jpg');
@@ -98,7 +90,6 @@ body {
     color: #fff;
     text-align: center;
     padding: 160px 120px;
-
 }
 
 .hero h1 {
@@ -106,17 +97,16 @@ body {
     margin-top: 125px;
     margin-bottom: 10px;
     color: floralwhite;
-
 }
-
-
 
 .hero-content {
     position: relative;
     z-index: 1;
     text-align: center;
 }
-.hero h1, .hero p {
+
+.hero h1,
+.hero p {
     margin: 0;
     padding: 0;
     font-weight: bold;
@@ -128,9 +118,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-
 
 @media (max-width: 768px) {
     .hero h1,
@@ -145,9 +133,7 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
-
     }
-
 }
 
 .mass-icon {
@@ -161,6 +147,7 @@ body {
     flex-direction: column;
     padding: 20px;
 }
+
 #next-masses {
     padding: 10px;
     display: flex;
@@ -172,6 +159,7 @@ body {
     font-weight: bold;
     color: #3d4161;
 }
+
 .masses-info-text {
     padding-right: 20px;
     margin-top: 15px;
@@ -195,18 +183,31 @@ body {
     border-radius: 10px;
     background-color: #fff;
     transition: background-color 0.3s;
+    position: relative; /* Potřebné pro umístění trojúhelníčku */
 }
 
 .calendar-day:hover {
     background-color: floralwhite;
+    color: #3d4161;
 }
 
-.highlight,
-.mass-day{
+.highlight {
     background-color: #3d4161;
     color: #fff3cd;
-    cursor: pointer;
 }
+
+/* Přidáno pro žlutý trojúhelníček */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid yellow; /* Barva trojúhelníčku */
+    position: absolute; /* Umístění do pravého horního rohu */
+    top: 5px; /* Vzdálenost od vrchu */
+    right: 5px; /* Vzdálenost od pravé strany */
+}
+
 /* Modal styling */
 .modal {
     display: none; /* Hidden by default */
@@ -221,7 +222,8 @@ body {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: floralwhite;
+    color: #3d4161;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -239,8 +241,6 @@ body {
     cursor: pointer;
 }
 
-
-
 .masses-container {
     display: flex;
     flex-direction: row;
@@ -248,7 +248,8 @@ body {
     justify-content: space-between;
 }
 
-.masses-info-text, .calendar-container {
+.masses-info-text,
+.calendar-container {
     flex: 1 1 45%;
 }
 
@@ -257,16 +258,19 @@ body {
         flex-direction: column;
     }
 
-    .masses-info-text, .calendar-container {
+    .masses-info-text,
+    .calendar-container {
         flex: 1 1 100%;
         padding: 10px;
     }
 }
 
-
-.about, .church, .contact {
+.about,
+.church,
+.contact {
     padding: 20px;
 }
+
 a {
     color: floralwhite;
     text-decoration: none;
@@ -295,7 +299,8 @@ footer {
 .footer-column h4 {
     margin-top: 0;
 }
-h5{
+
+h5 {
     background-color: floralwhite;
     color: #3d4161;
     border-radius: 10px;
@@ -307,7 +312,7 @@ h5{
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #3d4161 ;
+    background-color: #3d4161;
     border-radius: 10px;
 }
 
@@ -319,4 +324,10 @@ h5{
 .mass-day {
     background-color: #ea868f;
     color: white;
+}
+
+/* Přidání pointeru na neděle a dny s mší */
+.mass-day,
+.highlight {
+    cursor: pointer;
 }
