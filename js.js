@@ -4,7 +4,9 @@
 // akce se zobrazují v kalendáři i na liště :) |
 //                                             v
 const masses = [
-   // { date: new Date(2024, 9, 29), time: "10:45", description: "Název akce" }
+   { date: new Date(2024, 9, 12), time: "8:20", description: "Stavění sněhuláků" },
+   { date: new Date(2024, 9, 23), time: "9:15", description: "Sbírání listí" },
+{ date: new Date(2024, 9, 29), time: "23:59", description: "Koukaní na film" }
 ];
 
 function generateCalendar() {
