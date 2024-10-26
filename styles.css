@@ -201,9 +201,11 @@ body {
     background-color: floralwhite;
 }
 
-.highlight {
+.highlight,
+.mass-day{
     background-color: #3d4161;
     color: #fff3cd;
+    cursor: pointer;
 }
 /* Modal styling */
 .modal {
